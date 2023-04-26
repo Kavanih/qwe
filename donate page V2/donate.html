@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <!-- <div class="logo"></div> -->
+  </nav>
+  <header>
+    <!-- LEFT -->
+    <div class="left">
+      <div class="left_top">
+        <img src="./img/logb.svg" alt="" class="logo" />
+        <div class="logo">ALL HANDS DEVELELOPMENT FOUNDATION</div>
+      </div>
+      <img src="./img/poor 1.png" alt="" />
+    </div>
+    <!-- RIGHT -->
+    <div class="right">
+      <!-- SELECT BAR -->
+      <div class="Select">
+        <div class="gg">
+          <div class="method">Payment Method</div>
+          <hr />
+        </div>
+        <div class="aa">
+          <h2>Select a cryptocurrency to pay with</h2>
+        </div>
+
+        <div class="grid">
+          <button data-dest="bc1qwhrvsrpqu2vlydtg2ncckm2jst2e7a77jty0e4">
+            <div class="rii">
+              <img src="./img/img.svg" alt="" />
+              <div class="name">Bitcoin</div>
+            </div>
+            <div class="lii">BTC</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/eth-svgrepo-com.svg" alt="" />
+              <div class="name">Ethereum</div>
+            </div>
+            <div class="lii">Eth</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/dai-svgrepo-com.svg" alt="" />
+              <div class="name">DAI</div>
+            </div>
+            <div class="lii">DAI</div>
+          </button>
+          <button data-dest="D66ynz7VrWQg9TojMTy1u6ZXkiPo85dtE9">
+            <div class="rii">
+              <img src="./img/doge-svgrepo-com.svg" alt="" />
+              <div class="name">Dogecoin</div>
+            </div>
+            <div class="lii">Doge</div>
+          </button>
+
+          <button data-dest="ltc1qxqjdx235xlf8ngregad6ay7ukhufx6yqktss34">
+            <div class="rii">
+              <img src="./img/litecoin-logo-svgrepo-com.svg" alt="" />
+              <div class="name">Litecoin</div>
+            </div>
+            <div class="lii">LTC</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/matic-svgrepo-com.svg" alt="" />
+              <div class="name">POLYGON</div>
+            </div>
+            <div class="lii">MATIC</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/tether-crypto-cryptocurrency-2-svgrepo-com.svg" alt="" />
+              <div class="name">Tether</div>
+            </div>
+            <div class="lii">USDT</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/usdc-usd-coin-svgrepo-com.svg" alt="" />
+              <div class="name">Bitcoin</div>
+            </div>
+            <div class="lii">BTC</div>
+          </button>
+          <button data-dest="0x0B42048fAAf8ba54DFd8900D4c92EDC8a91362E9">
+            <div class="rii">
+              <img src="./img/binance-svgrepo-com.svg" alt="" />
+              <div class="name">Binance</div>
+            </div>
+            <div class="lii">BNB</div>
+          </button>
+          <button data-dest="rMZ8Bstw2EyASfgumqx81RmqNy6uMrcQDF">
+            <div class="rii">
+              <img src="./img/xrp-svgrepo-com.svg" alt="" />
+              <div class="name">RIPPLE</div>
+            </div>
+            <div class="lii">XRP</div>
+          </button>
+        </div>
+        <hr class="sec-hr" />
+        <div class="don">
+          Donate desired Token from other Token
+          <img src="./img/trust.svg" alt="" class="" />
+        </div>
+        <button class="custom">Custom Token</button>
+      </div>
+    </div>
+  </header>
+  <div class="overlay hidden"></div>
+
+  <!-- MODAL -->
+  <div class="modal hidden">
+    <form action="">
+      <div class="form_control">
+        <label for="name">Donor Name</label>
+        <input type="text" id="name" name="name" class="name" placeholder="XXX to stay annonymous" />
+      </div>
+      <div class="form_control">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" class="amount" />
+      </div>
+    </form>
+    <div class="copy_part">
+      <div class="copied hidden">Copied</div>
+      <input type="text" class="address" value="0x5107fb46d878a06c4816cf5a2f81efd52e60ba48e4c116abb78697745f418376"
+        disabled />
+      <button class="copy"><img src="../img/copy.svg" alt="" /></button>
+    </div>
+    <div class="qr_code" id="qr_code"></div>
+    <div class="send">
+      <button class="sent">SENT</button>
+      <button class="later">I will send later</button>
+    </div>
+  </div>
+
+  <!-- CUSTOM MODAL -->
+  <div class="custom_modal hidden">
+    <form action="">
+      <div class="form_control">
+        <label for="name">Donor Name</label>
+        <input type="text" id="name" name="name" class="name" placeholder="XXX to stay annonymous" />
+      </div>
+      <div class="form_control">
+        <label for="amount">Token Name</label>
+        <input type="text" id="amount" name="amount" class="amount" />
+      </div>
+      <label for="block">Select Token Blockchain</label>
+      <select name="block" id="block" default-value="arbitrum">
+        <option value="arbitrum">Arbitrum</option>
+        <option value="etherium">Etherium</option>
+        <option value="avalanche">Avalanche</option>
+        <option value="polygon">Polygon</option>
+        <option value="tron">Tron</option>
+        <option value="fantom">Fantom</option>
+        <option value="solana">Solana</option>
+        <option value="BNB">BNB Smart Chain</option>
+        <option value="cronos">Cronos Chain</option>
+        <option value="optimism">Optimism</option>
+        <option value="cadano">Cadano</option>
+        <option value="XRP">XRP</option>
+      </select>
+    </form>
+    <div class="centt">
+      <button class="gene">Generate Wallet Address</button>
+    </div>
+  </div>
+  <!-- SECOND MODAL -->
+  <div class="second_modal hidden">
+    <div class="qr_code1" id="qr_code1"></div>
+    <div class="copy_part1">
+      <div class="copied1 hidden">Copied</div>
+      <input type="text" class="address1" value="0x5107fb46d878a06c4816cf5a2f81efd52e60ba48e4c116abb78697745f418376"
+        disabled />
+      <button class="copy1"><img src="../img/copy.svg" alt="" /></button>
+    </div>
+    <div class="send">
+      <button class="sent">SENT</button>
+      <button class="later">I will send later</button>
+    </div>
+  </div>
+  <!-- LAST MODAL -->
+  <div class="last_modal hidden">
+    <div class="thank">
+      Thank you for contributing to the growth of education in Africa
+    </div>
+  </div>
+  <script src="../davidshimjs-qrcodejs-04f46c6/qrcode.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
